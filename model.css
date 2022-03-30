@@ -3,3 +3,7 @@ body {
  background-color: #32174d;
  color: #F6CEFC;
 }
+p {
+ font-size: large;
+ font-family: "Lucida Console", Arial;
+}
