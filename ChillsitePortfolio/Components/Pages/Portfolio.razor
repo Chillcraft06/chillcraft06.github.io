@@ -1,0 +1,22 @@
+﻿@page "/"
+
+<MudGrid Justify="Justify.SpaceEvenly">
+	@foreach (var p in Directory.GetFiles($"wwwroot/assets/PortfolioVideos/Vids").Reverse())
+	{
+		<MudItem lg="4" sm="12" Style="width:100vw;height:auto;">
+			<MudCard @Style="width:fit-content; height:auto;" Class="pa-6">
+				<video controls poster=@($"assets/PortfolioVideos/Thumbs/{Path.GetFileNameWithoutExtension(p)}.png") class="pa-2">
+						<source src=@($"assets/PortfolioVideos/Vids/{Path.GetFileNameWithoutExtension(p)}.mp4") type="video/mp4">
+						Your browser does not support the video tag.
+				</video>
+
+				<MudButton StartIcon=@Icons.Material.Filled.Download 
+				Color=@Color.Secondary 
+				IconColor=@Color.Tertiary
+				Variant=@Variant.Filled
+				Class="pa-2"
+				Href=@($"assets/gamezips/{Path.GetFileNameWithoutExtension(p)}.zip")>Download @Path.GetFileNameWithoutExtension(p)</MudButton>
+			</MudCard>
+		</MudItem>
+	}
+</MudGrid>

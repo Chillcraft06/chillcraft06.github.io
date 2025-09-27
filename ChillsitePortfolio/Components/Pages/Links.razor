@@ -1,0 +1,33 @@
+﻿@page "/Links"
+
+<MudGrid Justify="Justify.Center" Spacing="10" Style="padding-top:20vh">
+	<MudItem>
+		<MudCard Style="width:10vw;height:10vw;">
+			<MudIconButton Color="Color.Primary" title="Steam" Icon=@Icons.Custom.Brands.Steam Href="https://steamcommunity.com/id/chillcraft/" Style="width:inherit;height:inherit;" Size="Size.Large"/>
+		</MudCard>
+	</MudItem>
+	<MudItem>
+		<MudCard Style="width:10vw;height:10vw;">
+			<MudIconButton Color="Color.Primary" title="Youtube" Icon=@Icons.Custom.Brands.YouTube Href=@("https://www.youtube.com/@chillcraft3670") Style="width:inherit;height:inherit;" Size="Size.Large" />
+		</MudCard>
+	</MudItem>
+	<MudItem>
+		<MudCard Style="width:10vw;height:10vw;">
+			<MudIconButton Color="Color.Primary" title="Itch.io" Icon=@itchio Href=@("https://chillcraft.itch.io/") Style="width:inherit;height:inherit;" Size="Size.Large" />
+		</MudCard>
+	</MudItem>
+	<MudItem>
+		<MudCard Style="width:10vw;height:10vw;">
+			<MudIconButton Color="Color.Primary" title="Ko-Fi" Icon=@kofi Href=@("https://ko-fi.com/chillcraft") Style="width:inherit;height:inherit;" Size="Size.Large" />
+		</MudCard>
+	</MudItem>
+</MudGrid>
+
+@code {
+	string kofi = "<svg viewBox=\"0 0 24 24\">"+
+	"<path d=\"M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z\"/>"+
+	"</svg> ";
+	string itchio = "<svg viewBox=\"0 0 512 512\">"+
+	"<path d=\"M118 95c-16 10-49 47-49 56v16c0 21 19 38 36 38 21 0 38-17 38-37 0 20 17 37 38 37 20 0 36-17 36-37 0 20 18 37 39 37s39-17 39-37c0 20 16 37 36 37 21 0 38-17 38-37 0 20 17 37 38 37 17 0 36-17 36-38v-16c0-9-33-46-49-56a3511 3511 0 00-276 0zm99 101l-7 9a43 43 0 01-68-9l-7 9c-8 8-19 13-31 13l-4-1-2 46v18c0 36-4 118 16 138 30 7 86 10 142 10s112-3 142-10c20-20 16-102 16-138v-18l-2-46-4 1c-12 0-23-5-31-13l-7-9-7 9a43 43 0 01-68-9 43 43 0 01-38 22h-1-1a43 43 0 01-38-22zm-31 40c12 0 23 0 37 15l33-2 33 2c14-15 25-15 37-15 6 0 29 0 45 46l18 63c13 46-4 47-26 47-31-1-49-24-49-47a371 371 0 01-117 0c1 23-17 46-48 47-22 0-39-1-26-47l18-63c16-46 39-46 45-46zm70 36s-33 31-39 42l22-1v19h34v-19l22 1c-6-11-39-42-39-42z\" />"+
+	"</svg>";
+}

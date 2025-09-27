@@ -1,0 +1,13 @@
+﻿@page "/Pico8"
+@rendermode InteractiveServer
+
+<MudStack  Justify="Justify.Center" AlignItems="AlignItems.Center">
+	@foreach (var p in Directory.GetFiles($"wwwroot/assets/picogames"))
+	{
+		if (!p.EndsWith(".html")) continue;
+		<MudCard Style="width:fit-content; height:fit-content;">
+			<MudText Typo="Typo.h5" Align="Align.Center" Class="mb-4">@Path.GetFileNameWithoutExtension(p)</MudText>
+			<embed type="text/html" src=@($"assets/picogames/{Path.GetFileNameWithoutExtension(p)}.html") style="height:35vw;width:35vw;">
+		</MudCard>
+	}
+</MudStack>
